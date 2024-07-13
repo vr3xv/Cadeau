@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Trial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="page1">
+    <div class="envlope-wrapper">
+      <div id="envelope" class="close">
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter">
+          <div class="words line1"></div>
+          <div class="words line2"></div>
+          <div class="words line3"></div>
+          <div class="words line4"></div>
+        </div>
+        <div class="hearts">
+          <div class="heart a1"></div>
+          <div class="heart a2"></div>
+          <div class="heart a3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="reset">
+      <button id="open">Open</button>
+    </div>
+  </div>
+
+  <!-- Form Nama -->
+  <div id="nameForm" class="hidden">
+    <h2>Hi, siapa namamu?</h2>
+    <input type="text" id="nameInput" placeholder="Masukkan namamu">
+    <button onclick="submitName()">Submit</button>
+  </div>
+
+  <!-- Output Nama -->
+  <div id="greeting" class="hidden">
+    <p id="greetingText"></p>
+    <button onclick="askWellbeing()">Lanjutkan</button>
+  </div>
+
+  <!-- Pertanyaan Kabar -->
+  <div id="wellbeing" class="hidden">
+    <h2>Bagaimana kabarmu?</h2>
+    <button onclick="wellbeingResponse('Baik')">Baik</button>
+    <button onclick="wellbeingResponse('Tidak baik')">Tidak baik</button>
+  </div>
+
+  <!-- Respon Kabar -->
+  <div id="wellbeingResponse" class="hidden">
+    <p id="wellbeingText"></p>
+    <button onclick="askBirthday()">Lanjutkan</button>
+  </div>
+
+  <!-- Pertanyaan Ulang Tahun -->
+  <div id="birthday" class="hidden">
+    <h2>Apakah kamu bersyukur dapat bertambah usia tahun ini?</h2>
+    <button onclick="birthdayResponse('Ya')">Ya</button>
+    <button onclick="birthdayResponse('Tidak')">Tidak</button>
+  </div>
+
+  <!-- Pertanyaan Hadiah -->
+  <div id="gift" class="hidden">
+    <h2>Apakah kamu sudah membuka hadiah?</h2>
+    <button onclick="giftResponse('Ya')">Ya</button>
+    <button onclick="giftResponse('Belum')">Belum</button>
+  </div>
+
+  <!-- Respon Hadiah -->
+  <div id="giftResponse" class="hidden">
+    <h2>Bagaimana hadiahnya?</h2>
+    <input type="text" id="giftInput" placeholder="Ceritakan tentang hadiahnya">
+    <button onclick="submitGift()">Submit</button>
+  </div>
+
+  <!-- Pesan Penutup -->
+  <div id="closing" class="hidden">
+    <form id="responseForm" method="post" action="save_responses.php">
+      <input type="hidden" name="userName" id="userNameInput">
+      <input type="hidden" name="userWellbeing" id="userWellbeingInput">
+      <input type="hidden" name="userBirthday" id="userBirthdayInput">
+      <input type="hidden" name="userGiftResponse" id="userGiftResponseInput">
+      <p id="closingText"></p>
+      <button type="submit">Submit Data</button>
+    </form>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
