@@ -53,7 +53,7 @@ function submitGift() {
     userGiftResponse = document.getElementById('giftInput').value;
     document.getElementById('giftResponse').classList.add('hidden');
     document.getElementById('closing').classList.remove('hidden');
-    document.getElementById('closingText').innerText = `Terima kasih sudah berbagi cerita dan sudah ingin membuka hadiahnya, ${userName}. Senang mengetahui jika kamu merasa senang di hari yang baik ini. Semoga hari ulang tahunmu ${userBirthday === 'Ya' ? 'menyenangkan' : 'nanti akan menyenangkan'}. Dan mengenai hadiah, maaf aku memberimu terlalu banyak hadiah sebelumnya. Aku hanya suka membuat hadiah untuk orang-orang yang baik padaku, semoga ini hadiah terakhir yang aku siapkan untukmu dan selamat bertambah bijak`;
+    document.getElementById('closingText').innerText = `Terima kasih sudah berbagi cerita dan mau menerima hadiah ini, ${userName}. Senang bisa mengetahui bahwa kamu masih tumbuh setiap tahunnya. Semoga hari ulang tahunmu ${userBirthday === 'Ya' ? 'menyenangkan' : 'nanti akan menyenangkan'}. Dan mengenai hadiah, maaf jika hadiah ini mengganggumu. Tapi aku sudah merencanakannya sedari lama, jadi sayang jika tidak disampaikan. Sekali lagi maaf dan doa yang terbaik untukmu selalu ya ♡♡♡♡♡♡♡`;
     // Set hidden form values
     document.getElementById('userNameInput').value = userName;
     document.getElementById('userWellbeingInput').value = userWellbeing;
